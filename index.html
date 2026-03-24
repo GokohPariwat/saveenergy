@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบรายงานข้อมูล - พญาไท</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f4f5f7; /* สีพื้นหลังสีเทาอ่อนตามภาพ */
+            color: #333;
+            min-height: 100vh;
+        }
+
+        /* แถบเมนูด้านบน */
+        header {
+            background-color: #2940a6; /* สีน้ำเงินเข้ม */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 40px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .logo-icon {
+            width: 24px;
+            height: 24px;
+            fill: #4ade80; /* สีเขียวใบไม้ */
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 14px;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #86efac; /* สีเขียวอ่อนสำหรับสถานะ */
+            font-weight: 300;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-item {
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .nav-item.active {
+            background-color: rgba(255, 255, 255, 0.15); /* แถบสว่างสำหรับเมนูที่เลือก */
+            font-weight: 400;
+        }
+
+        /* ส่วนเนื้อหาหลัก */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .page-title {
+            color: #1e293b;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .page-subtitle {
+            color: #64748b;
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 50px;
+        }
+
+        /* การ์ดสำหรับกดไปลิงก์ */
+        .card-link {
+            background-color: white;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 80px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .card-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .icon-circle {
+            background-color: #e0e7ff; /* สีฟ้าอ่อนวงกลม */
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .icon-building {
+            width: 36px;
+            height: 36px;
+            fill: #3730a3; /* สีน้ำเงินเข้มไอคอนตึก */
+        }
+
+        .card-text {
+            color: #1e293b;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <svg class="logo-icon" viewBox="0 0 24 24">
+                <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z" />
+            </svg>
+            พญาไทประหยัดพลังงาน
+        
+    </header>
+
+    <main>
+        
+
+        <a href="https://gemini.google.com/share/0ee1f753b211" class="card-link" target="_blank">
+            <div class="icon-circle">
+                <svg class="icon-building" viewBox="0 0 24 24">
+                    <path d="M19,2H5A2,2 0 0,0 3,4V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V4A2,2 0 0,0 19,2M11,20H7V16H11V20M11,14H7V10H11V14M11,8H7V4H11V8M17,20H13V16H17V20M17,14H13V10H17V14M17,8H13V4H17V8Z" />
+                </svg>
+            </div>
+            <span class="card-text">เปิดลิงก์เพื่อกรอกข้อมูล</span>
+        </a>
+    </main>
+
+</body>
+</html>

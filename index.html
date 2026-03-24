@@ -14,14 +14,14 @@
 
         body {
             font-family: 'Prompt', sans-serif;
-            background-color: #f4f5f7; /* สีพื้นหลังสีเทาอ่อนตามภาพ */
+            background-color: #f4f5f7;
             color: #333;
             min-height: 100vh;
         }
 
         /* แถบเมนูด้านบน */
         header {
-            background-color: #2940a6; /* สีน้ำเงินเข้ม */
+            background-color: #2940a6;
             color: white;
             display: flex;
             justify-content: space-between;
@@ -40,7 +40,7 @@
         .logo-icon {
             width: 24px;
             height: 24px;
-            fill: #4ade80; /* สีเขียวใบไม้ */
+            fill: #4ade80;
         }
 
         .nav-container {
@@ -54,7 +54,7 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            color: #86efac; /* สีเขียวอ่อนสำหรับสถานะ */
+            color: #86efac;
             font-weight: 300;
         }
 
@@ -71,7 +71,7 @@
         }
 
         .nav-item.active {
-            background-color: rgba(255, 255, 255, 0.15); /* แถบสว่างสำหรับเมนูที่เลือก */
+            background-color: rgba(255, 255, 255, 0.15);
             font-weight: 400;
         }
 
@@ -118,7 +118,7 @@
         }
 
         .icon-circle {
-            background-color: #e0e7ff; /* สีฟ้าอ่อนวงกลม */
+            background-color: #e0e7ff;
             width: 80px;
             height: 80px;
             border-radius: 50%;
@@ -131,13 +131,36 @@
         .icon-building {
             width: 36px;
             height: 36px;
-            fill: #3730a3; /* สีน้ำเงินเข้มไอคอนตึก */
+            fill: #3730a3;
         }
 
         .card-text {
             color: #1e293b;
             font-size: 20px;
             font-weight: 500;
+        }
+
+        /* กล่องหมายเหตุ */
+        .note-container {
+            margin-top: 30px;
+            padding: 16px 24px;
+            background-color: #fffbeb; /* สีพื้นหลังเหลืองอ่อน */
+            border: 1px solid #fde68a; /* ขอบสีเหลือง */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #92400e; /* สีข้อความ */
+            font-size: 15px;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .note-icon {
+            width: 24px;
+            height: 24px;
+            fill: #d97706; /* สีไอคอน */
+            flex-shrink: 0; /* ป้องกันไอคอนบีบตัวเมื่อข้อความยาว */
         }
 
     </style>
@@ -150,11 +173,12 @@
                 <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z" />
             </svg>
             พญาไทประหยัดพลังงาน
+        </div>
         
     </header>
 
     <main>
-        
+      
 
         <a href="https://gemini.google.com/share/0ee1f753b211" class="card-link" target="_blank">
             <div class="icon-circle">
@@ -162,8 +186,15 @@
                     <path d="M19,2H5A2,2 0 0,0 3,4V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V4A2,2 0 0,0 19,2M11,20H7V16H11V20M11,14H7V10H11V14M11,8H7V4H11V8M17,20H13V16H17V20M17,14H13V10H17V14M17,8H13V4H17V8Z" />
                 </svg>
             </div>
-            <span class="card-text">เปิดลิงก์เพื่อกรอกข้อมูล</span>
+            <span class="card-text">เปิดลิงก์ข้อมูล Gemini</span>
         </a>
+
+        <div class="note-container">
+            <svg class="note-icon" viewBox="0 0 24 24">
+                <path d="M11,15H13V17H11V15M11,7H13V13H11V7M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20Z" />
+            </svg>
+            <span><strong>หมายเหตุ:</strong> ให้เปิดใน Google Chrome และ Login Google Email ก่อนเข้าบันทึกข้อมูล</span>
+        </div>
     </main>
 
 </body>

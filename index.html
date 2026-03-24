@@ -43,58 +43,12 @@
             fill: #4ade80;
         }
 
-        .nav-container {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            font-size: 14px;
-        }
-
-        .status {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: #86efac;
-            font-weight: 300;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 10px;
-        }
-
-        .nav-item {
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .nav-item.active {
-            background-color: rgba(255, 255, 255, 0.15);
-            font-weight: 400;
-        }
-
         /* ส่วนเนื้อหาหลัก */
         main {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 60px 20px;
-        }
-
-        .page-title {
-            color: #1e293b;
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .page-subtitle {
-            color: #64748b;
-            font-size: 16px;
-            font-weight: 300;
-            margin-bottom: 50px;
         }
 
         /* การ์ดสำหรับกดไปลิงก์ */
@@ -105,7 +59,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 50px 80px;
+            padding: 40px 80px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -117,21 +71,21 @@
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
         }
 
-        .icon-circle {
-            background-color: #e0e7ff;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+        /* กล่องใส่โลโก้ใหม่ */
+        .icon-image-container {
+            width: 100px;
+            height: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
         }
 
-        .icon-building {
-            width: 36px;
-            height: 36px;
-            fill: #3730a3;
+        /* ตั้งค่ารูปโลโก้ */
+        .custom-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* ช่วยให้รูปไม่เบี้ยวและคงสัดส่วนเดิม */
         }
 
         .card-text {
@@ -144,13 +98,13 @@
         .note-container {
             margin-top: 30px;
             padding: 16px 24px;
-            background-color: #fffbeb; /* สีพื้นหลังเหลืองอ่อน */
-            border: 1px solid #fde68a; /* ขอบสีเหลือง */
+            background-color: #fffbeb;
+            border: 1px solid #fde68a;
             border-radius: 8px;
             display: flex;
             align-items: center;
             gap: 12px;
-            color: #92400e; /* สีข้อความ */
+            color: #92400e;
             font-size: 15px;
             max-width: 600px;
             text-align: left;
@@ -159,8 +113,8 @@
         .note-icon {
             width: 24px;
             height: 24px;
-            fill: #d97706; /* สีไอคอน */
-            flex-shrink: 0; /* ป้องกันไอคอนบีบตัวเมื่อข้อความยาว */
+            fill: #d97706;
+            flex-shrink: 0;
         }
 
     </style>
@@ -174,19 +128,14 @@
             </svg>
             พญาไทประหยัดพลังงาน
         </div>
-        
     </header>
 
     <main>
-      
-
         <a href="https://gemini.google.com/share/0ee1f753b211" class="card-link" target="_blank">
-            <div class="icon-circle">
-                <svg class="icon-building" viewBox="0 0 24 24">
-                    <path d="M19,2H5A2,2 0 0,0 3,4V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V4A2,2 0 0,0 19,2M11,20H7V16H11V20M11,14H7V10H11V14M11,8H7V4H11V8M17,20H13V16H17V20M17,14H13V10H17V14M17,8H13V4H17V8Z" />
-                </svg>
+            <div class="icon-image-container">
+                <img src="logo.png" alt="โลโก้เขตพญาไท" class="custom-logo">
             </div>
-            <span class="card-text">บันทึข้อมูล Click</span>
+            <span class="card-text">บันทึกข้อมูล Click</span>
         </a>
 
         <div class="note-container">
